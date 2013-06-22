@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/jqfontselector.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="js/jqfontselector.js" type="text/javascript"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+
+			$('#fontSelect').fontSelector({
+				'hide_fallbacks' : true,
+				'initial' : 'Courier New,Courier New,Courier,monospace',
+				selected:function(style){
+					//$('#changeFont').css('fontFamily', style);
+					document.getElementById('changeFont').style.fontFamily=style;
+				}
+			});
+
+		});
+
+	</script>
+</head>
+<body>
+	<div id="fontSelect" class="fontSelect">
+		<span>Arial</span>
+		<div class="arrow-down"></div>
+		<ul>
+			<li>Arial,Arial,Helvetica,sans-serif</li>
+			<li>Comic Sans MS,Comic Sans MS,cursive</li>
+			<li>Courier New,Courier New,Courier,monospace</li>
+			<li>Georgia,Georgia,serif</li>
+			<li>Impact,Charcoal,sans-serif</li>
+			<li>Tahoma,Geneva,sans-serif</li>
+			<li>Times New Roman,Times,serif</li>
+			<li>Verdana,Geneva,sans-serif</li>
+			<li>Gill Sans,Geneva,sans-serif</li>
+		</ul>
+	</div>﻿
+
+	<div id="changeFont">
+		<p>Fuente Especial</p>
+	</div>
+</body>
+</html>
